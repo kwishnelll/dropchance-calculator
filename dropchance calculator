@@ -1,0 +1,61 @@
+#include <iostream>
+
+using namespace std;
+
+int main (){
+    
+    float kill;
+    float items;
+    char choice;
+    float chance1, chance2, chance3;
+    float prob;
+    
+    cout << "WELCOME TO DROP CHANCE CALCULATOR " << endl;
+    cout << "BY: KRISNEL" << endl;
+    
+    cout << "(a) find the missing attempts" << endl;
+    cout << "(b) find the missing items dropped " << endl;
+    cout << "(c) find the drop chance" << endl;
+    cout << " Please enter you choice (a-c): " ;
+    cin >> choice;
+    
+    if (choice == 'a'){
+    
+    cout << "Please enter numbers of items dropped: ";
+    cin >> items;
+    cout << "Please enter the drop chance(%): ";
+    cin >> prob;
+    
+    chance1 = items * 100 / prob;
+    cout << "There are/is " << chance1 << " attempt/s";
+}
+    
+    else if (choice == 'b'){
+    
+    cout << "Please enter numbers of attempt: ";
+    cin >> kill;
+    cout << "Please enter the drop chance(%): ";
+    cin >> prob;
+    
+    chance2 = kill * prob / 100;
+    cout << "There is/are " << chance2 << " item/s dropped ";
+}
+    
+    else if (choice == 'c'){
+   
+    cout << "Please enter numbers of attempt: ";
+    cin >> kill;
+    cout << "Please enter numbers of items dropped: ";
+    cin >> items;
+    
+    chance3 = items * 100 / kill;
+    
+    cout << " The drop chance is " << chance3 << "%";
+    }
+    
+    else{
+        cout << "Error, please refresh ";
+    }
+    
+ return 0;
+}
